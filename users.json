@@ -1,0 +1,20 @@
+{
+    "users": [
+        {
+            "username": "user1",
+            "password": "password123"
+        },
+        {
+            "username": "user2",
+            "password": "mypassword"
+        },
+        {
+            "username": "admin",
+            "password": "adminpass"
+        },
+        {
+            "username": "chloeconlon614@gmail.com",
+            "password": "altroair"
+        }
+    ]
+}

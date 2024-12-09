@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Altro Air</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* General Reset */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+
+
+        .container {
+            width: 100%;
+            max-width: 375px;
+            /* Mobile device width */
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            background: white;
+            min-height: 100vh;
+        }
+
+        /* Header Section */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .logo {
+            width: 100px;
+        }
+
+        .menu-icon {
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        /* Explore Section */
+        .explore-section {
+            padding: 20px;
+        }
+
+        .explore-section h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .main-image {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        /* Deals Section */
+        .deals-section {
+            padding: 20px;
+        }
+
+        .deals-section h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .deals-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+
+        .deal-image {
+            width: 100%;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
+        .deal-japan-image {
+            width: 100%;
+            grid-column: span 2;
+            background-size: 100% 100%;
+            border-radius: 8px;
+        }
+
+        /* Footer Navigation */
+        .footer {
+            position: fixed;
+            /* Keeps the footer fixed */
+            bottom: 0;
+            /* Position it at the bottom of the viewport */
+
+            min-width: 375px;
+            background-color: #f8f9fa;
+            /* Background color for the footer */
+            padding: 10px 0;
+            display: flex;
+            justify-content: space-around;
+            border-top: 1px solid #ddd;
+            /* Optional: border at the top */
+            box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
+            /* Optional: slight shadow for separation */
+            z-index: 10;
+            /* Ensures the footer stays above other content */
+        }
+
+        .nav-item {
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .icon {
+            display: block;
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+
+        .nav-item {
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .icon {
+            display: block;
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        /* Prevent stretching on larger screens */
+        @media (min-width: 376px) {
+            .container {
+                border-radius: 10px;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+                background: white;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <img src="images/AltroAirLogo.jpg" alt="Altro Air Logo" class="logo">
+            <div class="menu-icon">☰</div>
+        </header>
+
+        <div class="app-container"><!-- Explore Section -->
+            <section class="explore-section">
+                <h2>Explore China</h2>
+                <img src="images/china.jpg" alt="Great Wall of China" class="main-image">
+            </section>
+
+            <!-- International Deals -->
+            <section class="deals-section">
+                <h2>International Lightning Deals</h2>
+                <div class="deals-grid">
+                    <img src="images/hot_air_balloon.jpg" alt="Hot Air Balloon" class="deal-image">
+                    <img src="images/gardens.jpg" alt="Gardens by the Bay" class="deal-image">
+                    <img src="images/japan.jpg" alt="Japan Temple" class="deal-japan-image">
+                </div>
+            </section>
+
+
+            <!-- Footer Navigation -->
+            <footer class="footer">
+                <div class="nav-item">
+                    <span class="icon">🏷️</span>
+                    <p>Offers</p>
+                </div>
+                <div class="nav-item">
+                    <span class="icon">✈️</span>
+                    <p>Book</p>
+                </div>
+                <div class="nav-item">
+                    <span class="icon">👤</span>
+                    <p>Account</p>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

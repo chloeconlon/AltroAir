@@ -1,0 +1,130 @@
+/* Set the app to look like a mobile device */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f8ff;
+    height: 100vh;
+    overflow: hidden;
+    /* Prevent scrollbars */
+}
+
+.login-container {
+    width: 100%;
+    max-width: 375px;
+    /* Width of a typical mobile screen (e.g., iPhone 12) */
+    height: 100vh;
+    /* Full height of the device */
+    text-align: center;
+    background: #ffffff;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.logo {
+    width: 170px;
+    margin: 0 auto 20px;
+    padding-bottom: 70px;
+}
+
+form label {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+form input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.forgot-password {
+    font-size: 12px;
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+button {
+    width: 80%;
+    padding: 10px;
+    background-color: #002F7A;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 50px;
+
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.links {
+    margin-top: 50px;
+
+}
+
+.links a {
+    display: block;
+    margin: 5px;
+    font-size: 14px;
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
+
+/* Prevent stretching on larger screens */
+@media (min-width: 376px) {
+    body {
+        justify-content: center;
+        align-items: center;
+        background-color: #e0e0e0;
+        /* Gray border to mimic phone-only */
+    }
+
+    .login-container {
+        border-radius: 10px;
+    }
+}
+
+#username {
+    background-color: #e8ffff;
+    border: none;
+    border-radius: 50px;
+}
+
+#usertext {
+    padding-right: 260px;
+    font-weight: bold;
+}
+
+#passwordtext {
+    padding-right: 260px;
+    font-weight: bold;
+}
+
+#password {
+    background-color: #e8ffff;
+    border: none;
+    border-radius: 50px;
+
+
+}
