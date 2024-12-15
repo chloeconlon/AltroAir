@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Booking</title>
+    <style>
+        
+			 /* General Reset */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+
+		     .nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            background-color: none;
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav .logo img {
+            height: 40px;
+        }
+
+        .nav .hamburger {
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .header {
+            background-image: url('images/plane.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 200px;
+            position: relative;
+            color: white;
+            text-align: center;
+            display: flex;
+			
+			overflow: hidden;
+			top:0;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px ;
+            border-bottom: 1px solid #ddd;
+			display: flex;
+			max-width: 375px; /* Match the form's max-width */
+			margin: 0 auto; /* Center the header */
+			border-radius: 12px; /* Optional: to match the form's rounded edges */
+        }
+
+        .header-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+        }
+
+        .header-content h1 {
+            font-size: 24px;
+            margin: 0;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 375px;
+            /* Mobile device width */
+			 margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            background: white;
+            min-height: 100vh;
+        }
+
+        .form-container {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-container h2 {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .form-container .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-container label {
+            font-size: 14px;
+            color: #555;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-container input,
+        .form-container select {
+            width: 100%;
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        .form-container input:focus,
+        .form-container select:focus {
+            border-color: #007bff;
+        }
+
+        .form-container .trip-type {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .form-container .trip-type input {
+            margin-right: 5px;
+        }
+
+        .form-container .promo {
+            color: #007bff;
+            font-size: 14px;
+            margin-bottom: 15px;
+            cursor: pointer;
+            text-align: left;
+        }
+
+        .form-container button {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            background-color: #002f7a;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .form-container button:hover {
+            background-color: #caf0fe;
+        }
+		
+		/* Footer Navigation */
+        .footer {
+            position: relative;
+            /* Keeps the footer fixed */
+            bottom: 0;
+            /* Position it at the bottom of the viewport */
+			overflow y: auto;
+			
+            min-width: 375px;
+            background-color: #f8f9fa;
+            /* Background color for the footer */
+            padding: 10px 0;
+            display: flex;
+            justify-content: space-around;
+            border-top: 1px solid #ddd;
+            /* Optional: border at the top */
+            box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
+            /* Optional: slight shadow for separation */
+            z-index: 10;
+            /* Ensures the footer stays above other content */
+			    margin: 0 auto; /* Center the header */
+    border-radius: 12px; /* Optional: to match the form's rounded edges */
+        }
+
+        .nav-item {
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .icon {
+            display: block;
+            font-size: 18px;
+            margin-bottom: 5px;
+			cursor:pointer
+        }
+		
+		/* Prevent stretching on larger screens */
+        @media (min-width: 376px) {
+            .container {
+                border-radius: 10px;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+                background: white;
+    </style>
+</head>
+<body>
+    <div class="header">
+	
+ <nav class="nav">
+        <div class="logo">
+            <img src="images/AltroAirLogo.jpg" alt="AlroAirLogo">
+        </div>
+		   <div style="flex-grow: 1;"></div>
+        <div class="hamburger">☰</div>
+    </nav>
+        <div class="header-content">
+            <h1>Welcome to Altro Air</h1>
+            <p>Where Every Flight Feels Like Home.</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="form-container">
+            <h2>Book a Flight</h2>
+            <form>
+                <div class="form-group trip-type">
+                    <label>
+                        <input type="radio" name="trip-type" value="return" checked> Return
+                    </label>
+                    <label>
+                        <input type="radio" name="trip-type" value="one-way"> One Way
+                    </label>
+                    <label>
+                        <input type="radio" name="trip-type" value="multi-city"> Multi-city
+                    </label>
+                </div>
+
+                 <div class="form-group">
+                    <label for="from">From</label>
+                    <select id="from">
+                        <option value="ireland">Ireland - DUB</option>
+                        <option value="greece">Greece - ATH</option>
+                        <option value="france">France - ORY</option>
+						 <option value="italy">USA - JFK</option>
+                        <option value="spain">Spain - MAD</option>
+                        <option value="japan">Japan - KIX</option>
+                        <option value="canada">Canada - YYZ</option>
+                        <option value="new-zealand">New Zealand - AKL</option>
+                        <option value="italy">Italy - MXP</option>
+                    </select>
+                </div>
+
+                     <div class="form-group">
+                    <label for="to">To</label>
+                    <select id="to">
+                        <option value="ireland">Ireland - DUB</option>
+                        <option value="greece">Greece - ATH</option>
+                        <option value="france">France - ORY</option>
+						 <option value="italy">USA - JFK</option>
+                        <option value="spain">Spain - MAD</option>
+                        <option value="japan">Japan - KIX</option>
+                        <option value="canada">Canada - YYZ</option>
+                        <option value="new-zealand">New Zealand - AKL</option>
+                        <option value="italy">Italy - MXP</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="departure">Departure</label>
+                    <input type="date" id="departure">
+                </div>
+
+                <div class="form-group">
+                    <label for="return">Return</label>
+                    <input type="date" id="return">
+                </div>
+
+                <div class="form-group">
+                    <label for="passengers">Passengers / Class</label>
+                    <select id="passengers">
+                        <option value="economy">1 Passenger Economy</option>
+                        <option value="business">2 Passengers Business</option>
+                        <option value="first">3 Passengers First</option>
+                    </select>
+                </div>
+				
+                <div class="promo">+ Add promo code</div>
+				
+                <button type="submit">Search Flights</button>
+				
+				<br><br>
+				<footer class="footer">
+                <div class="nav-item">
+                    <span class="icon">🏷️</span>
+                    <p>Offers</p>
+                </div>
+                <div class="nav-item">
+                    <span class="icon">✈️</span>
+                    <p>Book</p>
+                </div>
+                <div class="nav-item">
+                    <span class="icon">👤</span>
+                    <p>Account</p>
+                </div>
+            </footer>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
