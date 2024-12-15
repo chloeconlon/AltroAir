@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flight Selection</title>
+  <style>
+    /* General Reset */
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  height: 100%; /* Full height for the page */
+  display: flex;
+  flex-direction: column; /* Vertically align the content */
+}
+
+/* Main Content Area */
+.centered {
+  max-width: 375px;
+  margin: 0 auto;
+  flex: 1; /* Fills remaining space between header and footer */
+  overflow-y: auto; /* Scrolls when content overflows */
+}
+
+.centered::-webkit-scrollbar {
+  display: none; /* Hide scrollbar */
+}
+
+/* Header Section */
+.header {
+  padding: 20px;
+  background-color: #f3f2f6;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.header h1 {
+  font-size: 18px;
+  margin: 0;
+  color: #002F7A;
+}
+
+.header .subtitle {
+  font-size: 16px;
+  margin-top: 5px;
+  color: #777;
+}
+
+/* Date Selector */
+.date-selector-container {
+  overflow-x: auto; /* Enable horizontal scrolling */
+  white-space: nowrap; /* Prevent wrapping of items */
+  background-color: white;
+  border-bottom: 1px solid #ddd;
+  margin: 0 auto;
+  border-radius: 12px;
+  padding: 10px 0; /* Optional padding for scrollable area */
+}
+
+.date-selector::-webkit-scrollbar {
+  display: none; /* Hide scrollbar */
+}
+
+.date-selector {
+  display: flex;
+  max-width: 100%; /* Allow it to shrink if needed */
+  justify-content: flex-start; /* Align items to the left */
+  gap: 10px; /* Add spacing between items */
+  padding: 0 10px; /* Add padding inside the scrollable area */
+}
+
+.date-selector div {
+  text-align: center;
+  flex: 0 0 auto; /* Prevent items from shrinking */
+  width: 100px; /* Set a consistent width for each item */
+  padding: 10px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.date-selector div.active {
+  border-bottom: 3px solid #990049;
+  color: #990049;
+}
+
+.date-selector div span {
+  display: block;
+  font-size: 14px;
+  color: #555;
+}
+
+.date-selector div.price {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Flight Results */
+.flight-results {
+  padding: 20px 10px;
+  height: 200px; /* Set a fixed height for the flight results */
+  overflow-y: auto; /* Scrolls when there is more content */
+}
+
+.flight-results::-webkit-scrollbar {
+  display: none; /* Hide scrollbar */
+}
+
+.flight-results h2 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+/* Flight Card */
+.flight-card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.flight-card .details {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.flight-card .details span {
+  font-size: 14px;
+  color: #333;
+}
+
+.flight-card .details .time {
+  font-weight: bold;
+}
+
+.flight-card .price {
+  text-align: right;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.flight-card .lowest-fare {
+  font-size: 12px;
+  color: #007aff;
+  margin-bottom: 10px;
+}
+
+.flight-card .details-line {
+  font-size: 12px;
+  color: #777;
+}
+
+.flight-card a {
+  font-size: 14px;
+  color: #0056b3;
+  text-decoration: none;
+}
+
+/*submission button
+.flight-results button {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            background-color: #002f7a;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+			}
+			 .flight-results button:hover {
+            background-color: #cafofe;
+        }*/
+		
+		
+		/* Button styling */
+.button {
+	width: 340px;
+	text-align: center;
+    display: inline-block;
+	padding: 10px;
+    font-size: 16px;
+    background-color: #002f7a;
+    color: white;
+	border: none;
+    border-radius: 8px;
+   cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+   
+ 
+}
+
+/* Button hover effect */
+.button:hover {
+    background-color: #cafofe;
+  
+}
+		
+		
+
+/* Footer Navigation */
+.footer {
+  position: relative;
+  bottom: 0;
+  min-width: 375px;
+  background-color: #f8f9fa;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-around;
+  border-top: 1px solid #ddd;
+  box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  margin: 0 auto;
+  border-radius: 12px;
+}
+
+.nav-item {
+  text-align: center;
+  font-size: 14px;
+}
+
+.icon {
+  display: block;
+  font-size: 18px;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+/* Prevent stretching on larger screens */
+@media (min-width: 376px) {
+  .container {
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background: white;
+  }
+}
+
+  </style>
+</head>
+<body>
+  <div class="centered">
+    <div class="header">
+      <h1>Your Total is Currently</h1>
+	  <h5> €936</h5>
+    </div>
+
+    
+	  <a href="total.html" class="button">Continue</a>
+    
+  </div>
+     
+
+  <footer class="footer">
+    <div class="nav-item">
+      <span class="icon">🏷️</span>
+      <p>Offers</p>
+    </div>
+    <div class="nav-item">
+      <span class="icon">✈️</span>
+      <p>Book</p>
+    </div>
+    <div class="nav-item">
+      <span class="icon">👤</span>
+      <p>Account</p>
+    </div>
+  </footer>
+</body>
+</html>
