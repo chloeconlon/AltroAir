@@ -160,21 +160,31 @@ html, body {
   color: #0056b3;
   text-decoration: none;
 }
-/*submission button*/
-.flight-results button {
-            width: 100%;
-            padding: 10px;
-            font-size: 16px;
-            background-color: #002f7a;
-            color: white;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-			}
-			 .flight-results button:hover {
-            background-color: #cafofe;
-        }
+
+
+/* Button styling */
+.button {
+	width: 340px;
+	text-align: center;
+    display: inline-block;
+	padding: 10px;
+    font-size: 16px;
+    background-color: #002f7a;
+    color: white;
+	border: none;
+    border-radius: 8px;
+   cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+   
+ 
+}
+
+/* Button hover effect */
+.button:hover {
+    background-color: #cafofe;
+  
+}
+	
 
 /* Footer Navigation */
 .footer {
@@ -333,7 +343,7 @@ html, body {
                     </label>
       </div>
 	  
-	  <button type="submit">Continue</button>
+	  <a href="return.html" class="button">Continue</a>
     </div>
 	
 	 
