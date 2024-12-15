@@ -1,0 +1,214 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Body styling */
+body {
+    background: linear-gradient(135deg, #fff);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto;
+}
+
+/* Container to center form */
+.contact-wrapper {
+    position: relative;
+    max-width: 375px;
+    display: flex;
+    border: 0.5px solid #D3D3D3;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+}
+
+
+.form-container {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 20px 30px;
+    width: 100%;
+    max-width: 375px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.form-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #002F7A;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+
+.input-group {
+    margin-bottom: 18px;
+    text-align: left;
+}
+
+
+.input-field,
+.textarea-field {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid #cccccc;
+    border-radius: 8px;
+    color: #333;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+
+.input-field:focus,
+.textarea-field:focus {
+    border-color: #002F7A;
+}
+
+
+.textarea-field {
+    resize: none;
+}
+
+.submit-btn {
+    background-color: #002F7A;
+    color: #fff;
+    border: none;
+    padding: 14px;
+    width: 100%;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Button hover effect */
+.submit-btn:hover {
+    background-color: #001e5a;
+}
+
+/* Response message styling */
+.response-message {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #28a745;
+    display: none;
+    font-weight: 500;
+}
+
+/* Responsive styling for max-width 375px */
+.form-container {
+    padding: 15px;
+    width: 90%;
+    max-width: 375px;
+}
+
+.form-title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.submit-btn {
+    font-size: 16px;
+    padding: 12px;
+}
+
+.input-field,
+.textarea-field {
+    font-size: 14px;
+}
+
+/* Clogo for center alignment */
+.Clogo {
+    width: 200px;
+    height: auto;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Hamburger menu styling */
+.hamburger-menu {
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    cursor: pointer;
+    z-index: 10001;
+    font-size: 25px;
+}
+
+.hamburger-menu .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 4px 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.menu {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: 2px 0 6px rgba(0, 0, 0, 0.5);
+    padding-top: 60px;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 10000;
+}
+
+.menu.open {
+    transform: translateX(0);
+}
+
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu ul li {
+    padding: 10px;
+    text-align: center;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+
+
+/* Footer Navigation */
+.footer {
+    position: fixed;
+    /* Keeps the footer fixed */
+    bottom: 0;
+    /* Position it at the bottom of the viewport */
+
+    min-width: 375px;
+    background-color: #f8f9fa;
+    /* Background color for the footer */
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-around;
+    border-top: 1px solid #ddd;
+    /* Optional: border at the top */
+    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
+    /* Optional: slight shadow for separation */
+    z-index: 100;
+    /* Ensures the footer stays above other content */
+}
+
+/*************************************contact us ***********/

@@ -1,0 +1,167 @@
+body {
+    justify-content: center;
+    display: flex;
+
+
+
+}
+
+header {
+    justify-content: space-between;
+}
+
+.container {
+    max-width: 375px;
+    justify-content: center;
+    position: absolute;
+    border: 0.5px solid #d8d8d8;
+    overflow: auto;
+}
+
+.acards {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    background-color: #e8ffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+a:link {
+    text-decoration: none;
+    color: black;
+}
+
+:link {
+    text-decoration: none;
+    color: black;
+}
+
+.nav-item {
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+
+}
+
+
+.cardsmain {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding-top: 40px;
+}
+
+
+.hamburger-menu {
+    cursor: pointer;
+    float: right;
+    padding-top: 55px;
+}
+
+.hamburger-menu .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+}
+
+.menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: -10;
+    width: 200px;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: 2px 0 -6px rgba(0, 0, 0, 0.5);
+    padding-top: 60px;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 10000;
+}
+
+.menu.open {
+    transform: translateX(0);
+}
+
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+    border-bottom: #007BFF;
+}
+
+.menu ul li {
+    padding: 10px;
+    text-align: center;
+    border-bottom: #007BFF;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+.logo {
+    width: 100px;
+    padding-top: 10px;
+    padding-right: 200px;
+}
+
+#user-icon {
+    height: 90px;
+    width: 90px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    place-items: center;
+
+}
+
+#sss {
+    display: flex;
+
+    justify-content: center;
+    text-align: center;
+}
+
+#settings {
+    padding-top: 10px;
+    height: 90px;
+    width: 90px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    place-items: center;
+
+}
+
+/* Footer Navigation */
+.footer {
+    position: fixed;
+    bottom: 0;
+    min-width: 375px;
+    background-color: #f8f9fa;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-around;
+    border-top: 1px solid #ddd;
+    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+
+}
+
+#logOut {
+    margin-top: 40px;
+    font-size: 20px;
+    border: none;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #e8ffff;
+}
+
+/*************************************contact us ***********/

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Airline Company</title>
+    <link rel="stylesheet" href="cstyles.css">
+</head>
+
+<body>
+
+    <div class="contact-wrapper">
+
+        <div class="hamburger-menu" onclick="toggleMenu()">
+            ☰
+        </div>
+
+
+        <nav id="menu" class="menu">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="#">BOOKINGS</a></li>
+                <li><a href="#">BOARDING PASSES</a></li>
+                <li><a href="contactus.html">CONTACT US</a></li>
+            </ul>
+        </nav>
+
+
+
+
+        <div class="form-box">
+            <img src="images/AltroAirLogo.jpg" class="Clogo">
+            <h1 class="form-title">Contact Us</h1>
+            <form id="contact-form" class="contact-form">
+                <div class="input-group">
+                    <label for="user-name" class="input-label">Your Name</label>
+                    <input type="text" id="user-name" name="name" class="input-field" required
+                        placeholder="Enter your name">
+                </div>
+                <div class="input-group">
+                    <label for="user-email" class="input-label">Email</label>
+                    <input type="email" id="user-email" name="email" class="input-field" required
+                        placeholder="Enter your email">
+                </div>
+                <div class="input-group">
+                    <label for="user-message" class="input-label">Message</label>
+                    <textarea id="user-message" name="message" class="textarea-field" rows="4" required
+                        placeholder="Your message..."></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+            <p id="response-message" class="response-message"></p>
+        </div>
+    </div>
+
+    <!-- Footer Navigation -->
+    <footer class="footer">
+        <div class="nav-item">
+            <span class="icon">🏷️</span>
+            <p>Offers</p>
+        </div>
+        <div class="nav-item">
+            <span class="icon">✈️</span>
+            <p>Book</p>
+        </div>
+        <div class="nav-item">
+            <a href="account.html>"><span class="icon">👤</span>
+                <p>Account</p>
+            </a>
+        </div>
+    </footer>
+    <script src="scriptt.js"></script>
+</body>
+
+</html>
